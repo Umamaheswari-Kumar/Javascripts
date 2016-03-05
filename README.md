@@ -1,30 +1,28 @@
 # Useful Javascripts:
 
 #### before-browser-unload-warn-js
-__underline__
-Before Browser unload warn used to warn user try to close the tab or browser.__
-Dependencied: JQuery__
+----------------------------------
+Before Browser unload warn used to warn user try to close the tab or browser.<br/>
+Dependencied: JQuery<br/>
 
-download_file_trigger.js
-__underline__
-Download Trigger function is used to trigger download after ajax success / onclick by verifying the form fields.__
-Dependencies: JQuery__
-Example:__
+#### download_file_trigger.js
+-----------------------------
+Download Trigger function is used to trigger download after ajax success / onclick by verifying the form fields.<br/>
+Dependencies: JQuery<br/>
+Example:<br/>
 ```html
-<pre>
-  <srcript>
-    $(document).ready(function() {
-      $.fn.download_trigger(FILE_URL,FILENAME);
-    });
-  </srcript>
-</pre>
+<srcript>
+  $(document).ready(function() {
+    $.fn.download_trigger(FILE_URL,FILENAME);
+  });
+</srcript>
 ```
 
-image_fader_on_scroll.js
-__underline__
-Image Fader on Scroll is used to fade out image on scroll. It require two image one original image, and blurred image.(Set Maximum height for two images)__
-Dependencies: JQuery__
-Example: __
+#### image_fader_on_scroll.js
+-----------------------------
+Image Fader on Scroll is used to fade out image on scroll. It require two image one original image, and blurred image.(Set Maximum height for two images)<br/>
+Dependencies: JQuery<br/>
+Example:<br/>
 ```html
 <style>
 .blurred {
@@ -38,68 +36,58 @@ Example: __
 }
 </style>
 
-<pre>
-    <div class="carousel-inner" style="background: transparent;">
-      <img src="original.jpg" alt="Original" style="opacity: 1">
-      <div class="blurred"></div>
-    </div>
-</pre>
+<div class="carousel-inner" style="background: transparent;">
+  <img src="original.jpg" alt="Original" style="opacity: 1">
+  <div class="blurred"></div>
+</div>
 ```
-Note: blurred.jpg is blurred image, original.jpg is original image.__
+Note: blurred.jpg is blurred image, original.jpg is original image.<br/>
 
-set_maximum_limit_for_text_fields.js
-__underline__
-Set maximum Limit Script Used to prevent the type text in text field or text area if reaches the maximum text.__
-Example:__
+#### set_maximum_limit_for_text_fields.js
+-----------------------------------------
+Set maximum Limit Script Used to prevent the type text in text field or text area if reaches the maximum text.<br/>
+Example:<br/>
 ```html
-<pre>
-  <script>
-    $(document).ready(function() {
-      $('#text_field_id').limit({
-        limit: 300
-      })
+<script>
+  $(document).ready(function() {
+    $('#text_field_id').limit({
+      limit: 300
     })
-  </script>
-</pre>
+  })
+</script>
 ```
 
-Parsley_validation_for_one_field_over_multiple_field.html
-__underline__
-If we need to check only one field accross multiple fields using parsley can be done by write a script like in these file.__
-Dependencies: JQuery and Parsley.js__
+#### Parsley_validation_for_one_field_over_multiple_field.html
+--------------------------------------------------------------
+If we need to check only one field accross multiple fields using parsley can be done by write a script like in these file.<br/>
+Dependencies: JQuery and Parsley.js<br/>
 
-custom_function.js
-__underline__
-Custom function contain three function__
-1) Toggle Function:__
+### custom_function.js
+----------------------
+Custom function contain three function<br/>
+* 1) Toggle Function:<br/>
   ```html
   <pre>
     <a href="javascript:void(0);" data-toggle="toggleText" data-alt-text="Read Less">Read More</a>
   </pre>
   ```
-2) Swap Text:__
+* 2) Swap Text:<br/>
   ```html
-  <pre>
-    <div class="col-md-5 col-xs-12 textChange">
-      <span class="active">Thangadurai</span>
-      <span style="display: none;">Paranthaman</span>
-      <span style="display: none;">Nainamalai</span>
-    </div>
-    <script>
-      $('.textChange').swapText();
-    </script>
-  </pre>
+  <div class="col-md-5 col-xs-12 textChange">
+    <span class="active">Thangadurai</span>
+    <span style="display: none;">Paranthaman</span>
+    <span style="display: none;">Nainamalai</span>
+  </div>
+  <script>
+    $('.textChange').swapText();
+  </script>
   ```
-3) Allow Keyboard keypress by REGEX.__
-  Allow only alphabets, and backspace/delete/home/end.__
+* 3) Allow Keyboard keypress by REGEX.<br/>
+  Allow only alphabets, and backspace/delete/home/end.<br/>
   ```html
-  <pre>
-    <input name="name" onkeypress="$(this).allowKeyboardKeys(event, '^[a-zA-Z. ]+$')" placeholder="Full Name" type="text">
-  </pre>
+  <input name="name" onkeypress="$(this).allowKeyboardKeys(event, '^[a-zA-Z. ]+$')" placeholder="Full Name" type="text">
   ```
-  Allow only Numbers, and backspace/delete/home/end.__
+  Allow only Numbers, and backspace/delete/home/end.<br/>
   ```html
-  <pre>
-    <input name="phone" onkeypress="$(this).allowKeyboardKeys(event, '^[0-9]+$')" placeholder="Phone (include country code)" type="text">
-  </pre>
+  <input name="phone" onkeypress="$(this).allowKeyboardKeys(event, '^[0-9]+$')" placeholder="Phone (include country code)" type="text">
   ```
