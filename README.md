@@ -30,3 +30,11 @@ Example:
           <img src="original.jpg" alt="Original" style="opacity: 1">
           <div class="blurred"></div>
         </div>
+
+set_maximum_limit_for_text_fields.js
+------------------------------------
+Set maximum Limit Script Used to prevent the type text in text field or text area if reaches the maximum text.
+Example:
+  $('#text_field_id').limit({
+    limit: 300
+  })
