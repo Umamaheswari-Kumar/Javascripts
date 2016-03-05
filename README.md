@@ -1,4 +1,5 @@
 # Useful Javascripts:
+=====================
 
 #### before-browser-unload-warn-js
 ----------------------------------
@@ -62,7 +63,7 @@ Example:<br/>
 If we need to check only one field accross multiple fields using parsley can be done by write a script like in these file.<br/>
 Dependencies: JQuery and Parsley.js<br/>
 
-### custom_function.js
+#### custom_function.js
 ----------------------
 Custom function contain three function<br/>
 * 1) Toggle Function:<br/>
@@ -71,6 +72,7 @@ Custom function contain three function<br/>
     <a href="javascript:void(0);" data-toggle="toggleText" data-alt-text="Read Less">Read More</a>
   </pre>
   ```
+  <br/>
 * 2) Swap Text:<br/>
   ```html
   <div class="col-md-5 col-xs-12 textChange">
@@ -82,6 +84,7 @@ Custom function contain three function<br/>
     $('.textChange').swapText();
   </script>
   ```
+  <br/>
 * 3) Allow Keyboard keypress by REGEX.<br/>
   Allow only alphabets, and backspace/delete/home/end.<br/>
   ```html
@@ -91,3 +94,8 @@ Custom function contain three function<br/>
   ```html
   <input name="phone" onkeypress="$(this).allowKeyboardKeys(event, '^[0-9]+$')" placeholder="Phone (include country code)" type="text">
   ```
+
+#### dynamic-field-add-with-percentage-count_chosen_plugin.js
+-------------------------------------------------------------
+This is custom code only for my website. Like the sample script, create a new field in chosen plugin.<br/>
+Dependencies: JQuery and Jquery Chosen.js
