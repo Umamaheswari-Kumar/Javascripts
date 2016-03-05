@@ -44,3 +44,21 @@ Parsley_validation_for_one_field_over_multiple_field.html
 ---------------------------------------------------------
 If we need to check only one field accross multiple fields using parsley can be done by write a script like in these file.
 Dependencies: JQuery and Parsley.js
+
+custom_function.js
+------------------
+Custom function contain three function
+1) Toggle Function:
+  <a href="javascript:void(0);" data-toggle="toggleText" data-alt-text="Read Less">Read More</a>
+2) Swap Text:
+  <div class="col-md-5 col-xs-12 textChange">
+    <span class="active">Thangadurai</span>
+    <span style="display: none;">Paranthaman</span>
+    <span style="display: none;">Nainamalai</span>
+  </div>
+  $('.textChange').swapText();
+3) Allow Keyboard keypress by REGEX
+  Allow only alphabets, and backspace/delete/home/end.
+  <input name="name" onkeypress="$(this).allowKeyboardKeys(event, '^[a-zA-Z. ]+$')" placeholder="Full Name" type="text">
+  Allow only Numbers, and backspace/delete/home/end.
+  <input name="phone" onkeypress="$(this).allowKeyboardKeys(event, '^[0-9]+$')" placeholder="Phone (include country code)" type="text">
