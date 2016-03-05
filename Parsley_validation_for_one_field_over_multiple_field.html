@@ -1,0 +1,57 @@
+<!-- HTML Code: -->
+<form action="< action >" method="GET" role="Search" id="list_search" %>
+  <div class="row">
+    <div class="col-md-10 col-sm-11 col-xs-12">
+      <div class="row">
+        <div class="col-sm-3 col-xs-12">
+          <input type="text" name="scompany" class="form-control square-corners" id="search_company" placeholder="Company Name" value="<%= @search_query %>" required data-parsley-errors-messages-disabled>
+        </div>
+        <div class="col-sm-3 col-xs-12">
+          <input type="text" name="scountry" class="form-control square-corners" id="location_country" placeholder="Country" value="<%= @search_country %>" onkeyup="$.fn.auto_country(<%= @search_location_country %>);" required data-parsley-errors-messages-disabled>
+        </div>
+        <div class="col-sm-3 col-xs-12">
+          <input type="text" name="sstate" class="form-control square-corners" id="location_state" placeholder="State" value="<%= @search_state %>" onkeyup="$.fn.auto_state();" required data-parsley-errors-messages-disabled>
+        </div>
+        <div class="col-sm-3 col-xs-12">
+          <input type="text" name="scity" class="form-control square-corners" id="location_city" placeholder="City" value="<%= @search_city %>" onkeyup="$.fn.auto_city();" required data-parsley-errors-messages-disabled>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-1 col-xs-12">
+      <input class="btn btn-default" style="height:34px; width:100px;" type="submit" value="Search!">
+    </div>
+  </div>
+</form>
+
+<!-- Jquery: -->
+<script>
+$(document).ready(function() {
+  $('#list_search').parsley().subscribe('parsley:form:validate', function (formInstance) {
+    if ($("input[name=scompany]").parsley().isValid() || 
+      $("input[name=scity]").parsley().isValid() || 
+      $("input[name=sstate]").parsley().isValid() || 
+      $("input[name=scountry]").parsley().isValid())
+    {
+      $('#vendor_list_search_error').html('');
+      // Remove the required validation from all of them, so the form gets submitted
+      // We already validated each field, so one is filled.
+      // Also, destroy parsley's object
+      $("input[name=scompany]").removeAttr('required').parsley().destroy();
+      $("input[name=scity]").removeAttr('required').parsley().destroy();
+      $("input[name=sstate]").removeAttr('required').parsley().destroy();
+      $("input[name=scountry]").removeAttr('required').parsley().destroy();
+      return;
+    }
+    // If none is valid, add the validation to them all
+    $("input[name=scompany]").attr('required', 'required').parsley();
+    $("input[name=scity]").attr('required', 'required').parsley();
+    $("input[name=sstate]").attr('required', 'required').parsley();
+    $("input[name=scountry]").attr('required', 'required').parsley();
+    // stop form submission
+    formInstance.submitEvent.preventDefault();
+    // and display a gentle message
+    $('#vendor_list_search_error').html("You must fill the fields of at least one of these four blocks!");
+    return;
+  });
+})
+</script>

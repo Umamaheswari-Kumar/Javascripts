@@ -38,3 +38,9 @@ Example:
   $('#text_field_id').limit({
     limit: 300
   })
+
+
+Parsley_validation_for_one_field_over_multiple_field.html
+---------------------------------------------------------
+If we need to check only one field accross multiple fields using parsley can be done by write a script like in these file.
+Dependencies: JQuery and Parsley.js
