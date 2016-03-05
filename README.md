@@ -68,11 +68,8 @@ Dependencies: JQuery and Parsley.js<br/>
 Custom function contain three function<br/>
 * 1) Toggle Function:<br/>
   ```html
-  <pre>
-    <a href="javascript:void(0);" data-toggle="toggleText" data-alt-text="Read Less">Read More</a>
-  </pre>
+  <a href="javascript:void(0);" data-toggle="toggleText" data-alt-text="Read Less">Read More</a>
   ```
-  <br/>
 * 2) Swap Text:<br/>
   ```html
   <div class="col-md-5 col-xs-12 textChange">
@@ -84,7 +81,6 @@ Custom function contain three function<br/>
     $('.textChange').swapText();
   </script>
   ```
-  <br/>
 * 3) Allow Keyboard keypress by REGEX.<br/>
   Allow only alphabets, and backspace/delete/home/end.<br/>
   ```html
